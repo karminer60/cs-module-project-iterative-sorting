@@ -12,14 +12,14 @@ def binary_search(arr, target):
 
     # Your code here
     initial = 0
-    last = (len(arr) - 1)
+    last = len(arr)
     correct = False
-
-    while initial <= last and not correct:
+    
+    while not correct:
         mid = (initial  + last) // 2
 
         if arr[mid] == target:
-            found = False
+            correct = False
             return mid
 
         else:
@@ -36,4 +36,3 @@ def binary_search(arr, target):
         return mid
 
     return -1  # not found
-x
